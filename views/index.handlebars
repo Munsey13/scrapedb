@@ -1,0 +1,37 @@
+{{#unless articles}}
+
+<div class="row text-center">
+    <h2>No articles</h2>
+</div>
+{{else}}
+{{#each articles}}
+
+
+{{#unless saved}}
+
+<div class="row">
+    <div class="col-sm-12 article card" data-id={{id}}>
+        <div class="article-header">
+
+            <a href="{{link}}" target="_blank">
+                <h2>{{title}}</h2>
+            </a>
+        </div>
+
+        <hr class="mx-auto">
+
+
+        <div class="article-body">
+            <p>{{description}}</p>
+
+        </div>
+
+        <hr class="mx-auto">
+
+
+        <button class="btn btn-dark save mx-auto">Save Article</button>
+        <button class="btn btn-dark comment mx-auto" buttonID={{id}}
+            data-target="#{{id}}">Comment</button>
+    </div>
+
+</div>
